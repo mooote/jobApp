@@ -1,0 +1,59 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+        android:background="#ffffff"
+    android:orientation="vertical" >
+    
+     <!-- <ListView
+                android:id="@+id/list1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+                android:background="#00ffff" 
+                android:layout_marginBottom="100dp"
+                android:layout_marginTop="220dp"
+                android:choiceMode="singleChoice"
+                android:fadingEdge="vertical" -->
+    
+    <!--  <imageView
+        android:id="@+id/iv_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:gravity="center" >      
+      </imageView>-->
+    
+    
+    <TextView
+        android:id="@+id/tv_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:gravity="left"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:textColor="#000000" />
+    
+        <TextView
+        android:id="@+id/tv_howToApply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:gravity="left"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:textColor="#000000" />
+        
+        <TextView
+        android:id="@+id/tv_companyUrl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:gravity="left"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:textColor="#000000" />
+    
+    
+</LinearLayout>

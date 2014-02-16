@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+     <!-- リニアレイアウト(縦並び) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical" >
+
+            <!-- リニアレイアウト(横並び) -->
+           <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:orientation="horizontal" >
+
+                <!-- 検索キーワード入力エリア -->
+                <EditText
+                    android:id="@+id/et_keyword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textNoSuggestions"
+                    android:layout_weight="1"
+                    android:hint="@string/searchBox_hint"
+                    android:singleLine="true"
+                    android:textSize="30sp" />
+
+                <!-- 検索ボタン -->
+                <ImageButton
+                    android:id="@+id/ibtn_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/search" />
+            </LinearLayout>
+            
+  <!-- try catch error message -->
+    	<TextView
+        android:id="@+id/tv_noResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:gravity="left"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:textColor="#000000" />
+    	<TextView
+        android:id="@+id/tv_pleaseInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:gravity="left"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:textColor="#000000" />
+ <!-- 1st seratch page list (lastResultlist) -->   	
+            <ListView
+                android:id="@+id/list1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+                <!-- android:background="#00ffff" 
+                android:layout_marginBottom="100dp"
+                android:layout_marginTop="220dp"
+                android:choiceMode="singleChoice"
+                android:fadingEdge="vertical" -->
+        </LinearLayout>
+    
+</LinearLayout>
