@@ -3,8 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-        android:background="#ffffff"
-    android:orientation="vertical" >
+    android:textColor="#ffffff"
+    android:background="#000000"
+    android:orientation="vertical"
+    android:textStyle="normal"
+    android:gravity="left" >
     
      <!-- <ListView
                 android:id="@+id/list1"
@@ -29,31 +32,19 @@
         android:id="@+id/tv_description"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:gravity="left"
-        android:textAllCaps="true"
-        android:textStyle="bold"
-        android:textColor="#000000" />
+        android:layout_margin="5dp"/>
     
         <TextView
         android:id="@+id/tv_howToApply"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:gravity="left"
-        android:textAllCaps="true"
-        android:textStyle="bold"
-        android:textColor="#000000" />
+        android:layout_margin="5dp"/>
         
         <TextView
         android:id="@+id/tv_companyUrl"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:gravity="left"
-        android:textAllCaps="true"
-        android:textStyle="bold"
-        android:textColor="#000000" />
+        android:layout_margin="5dp"/>
     
     
 </LinearLayout>

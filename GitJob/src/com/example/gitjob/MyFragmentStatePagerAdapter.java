@@ -17,20 +17,25 @@ public class MyFragmentStatePagerAdapter
 
   @Override
   public Fragment getItem(int i) {
+	  
 	  //setting up each pages default page1 appears first
     switch(i){
     case 0:
       return new Fragment0();
+      
     case 1:
       return new Fragment1();
       default: return null;
     }
-
   }
 
   @Override
   public int getCount() {
-    return 2;
+    if(MainActivity.pageControl){
+    	return 2;
+    }else{
+    	return 1;
+    }
   }
 
   @Override

@@ -6,6 +6,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.text.Html;
+import android.text.util.Linkify;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -66,11 +67,12 @@ public class Fragment0 extends Fragment {
             MainActivity.ENCODE_jPlace_initial= searchBar.getText().toString();
 			if(MainActivity.ENCODE_jPlace_initial.length()==0){ 
 				TextView pleaseInput = (TextView)view.findViewById(R.id.tv_pleaseInput);
-				pleaseInput.setText("please type city name");				
+				pleaseInput.setText("oops! correct typing please");
+				pleaseInput.setTextSize(25); 
 				return;
     	    	}
           	// set adaptor and layout page and list
-           adapter = new JobListAdapter(getActivity(), R.layout.search_page, MainActivity.lastResultList);
+            adapter = new JobListAdapter(getActivity(), R.layout.search_page, MainActivity.lastResultList);
         	// search result list set to adaptor 
             quickList.setAdapter(adapter);
         	// set task into the first page 
@@ -92,9 +94,8 @@ public class Fragment0 extends Fragment {
 			super.onPreExecute();
 			// progress window set up
 			dialog = new ProgressDialog(getActivity()); 
-														
 			dialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
-			dialog.setMessage("Please wait...");
+			dialog.setMessage("loading...");
 			// to make sure the page stays when other area is clicked
 			dialog.setCanceledOnTouchOutside(false);
 			// boolean 										
@@ -139,6 +140,8 @@ public class Fragment0 extends Fragment {
 		@Override
 		public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
 				long arg3) {
+			      MainActivity.pageControl=true;
+			        MainActivity.pageLock.notifyDataSetChanged();
 					((MainActivity)getActivity()).viewPager.setCurrentItem(1);
 					MainActivity.listNumber = arg2;
 					//JobInfoItems item = MainActivity.lastResultList.get(MainActivity.listNumber);
@@ -148,10 +151,16 @@ public class Fragment0 extends Fragment {
 					    TextView description = (TextView) Fragment1.view.findViewById(R.id.tv_description);
 					    String de = item.getDescription();
 					    description.setText(Html.fromHtml(de));
-					    description.setTextSize(5);
+					    description.setTextSize(10);
 					    TextView howToApply = (TextView)Fragment1.view.findViewById(R.id.tv_howToApply);
-					    howToApply.setText(item.getHowToApply());
-					    howToApply.setTextSize(5);
+					    String ho = item.getDescription();
+					    description.setText(Html.fromHtml(ho));
+					    howToApply.setTextSize(10);
+					    TextView companyUrl = (TextView)Fragment1.view.findViewById(R.id.tv_companyUrl);
+					    String co = item.getDescription();
+					    description.setText(Html.fromHtml(co));
+					    companyUrl.setTextSize(10);
+					    Linkify.addLinks(companyUrl, Linkify.WEB_URLS);
 					    }
 									
 		}
@@ -167,3 +176,17 @@ public class Fragment0 extends Fragment {
   }
 
 }
+
+/** code for url open
+method throws Exception {
+
+        URL oracle = new URL("http://www.oracle.com/");
+        BufferedReader in = new BufferedReader(
+        new InputStreamReader(oracle.openStream()));
+
+        String inputLine;
+        while ((inputLine = in.readLine()) != null)
+            System.out.println(inputLine);
+        in.close();
+    }
+    */
