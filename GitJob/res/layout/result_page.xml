@@ -1,24 +1,70 @@
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:textColor="#ffffff"
-    android:background="#000000"
-    android:orientation="vertical"
-    android:textStyle="normal"
-    android:gravity="left" >
-    
-     <!-- <ListView
-                android:id="@+id/list1"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
-                android:background="#00ffff" 
-                android:layout_marginBottom="100dp"
-                android:layout_marginTop="220dp"
-                android:choiceMode="singleChoice"
-                android:fadingEdge="vertical" -->
-    
+<?xml version="1.0" encoding="utf-8"?>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    	xmlns:tools="http://schemas.android.com/tools" 
+    	android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:textColor="#ffffff"
+    	android:background="#000000"
+    	android:orientation="vertical"
+    	android:textStyle="normal"
+    	android:gravity="left" 
+    	android:paddingBottom="30dp"
+    	android:paddingTop="20dp"
+    	android:paddingLeft="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tv_jobTitle_p2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="1dp"
+        android:gravity="left"
+        android:textStyle="bold"
+        android:textColor="#126a70" />
+      
+	<LinearLayout
+	    android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        
+    <TextView
+        android:id="@+id/tv_company_p2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="1dp"
+        android:layout_marginRight="20dp"
+        android:textStyle="bold"
+        android:textColor="#ffffff" />
+       
+    <TextView
+        android:id="@+id/tv_type_p2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="1dp"
+        android:textStyle="normal"
+        android:textColor="#00ff00" />
+         </LinearLayout>
+              	
+		<LinearLayout
+	    android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        
+        <TextView
+        android:id="@+id/tv_location_p2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="1dp"
+        android:layout_marginRight="20dp"
+        android:textStyle="normal"
+        android:textColor="#00ff00" />
+	</LinearLayout>   
+   
     <!--  <imageView
         android:id="@+id/iv_logo"
         android:layout_width="wrap_content"
@@ -26,25 +72,30 @@
         android:layout_margin="5dp"
         android:gravity="center" >      
       </imageView>-->
-    
+ 
+     <LinearLayout
+             android:orientation="vertical"
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content">
     
     <TextView
         android:id="@+id/tv_description"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp"/>
-    
-        <TextView
+        android:layout_marginRight="20dp"/>
+
+    <TextView
         android:id="@+id/tv_howToApply"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp"/>
+        android:layout_marginRight="20dp"/>
         
-        <TextView
+    <TextView
         android:id="@+id/tv_companyUrl"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp"/>
+        android:layout_marginRight="20dp"/>   
+  </LinearLayout>
+ </LinearLayout>
+</ScrollView>
     
-    
-</LinearLayout>

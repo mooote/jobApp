@@ -54,7 +54,7 @@ public class JobInfoItems {
 		return howToApply;
 	}
 	
-	public String getCompamyUrl(){
+	public String getCompanyUrl(){
 		return companyUrl;
 	}
 	

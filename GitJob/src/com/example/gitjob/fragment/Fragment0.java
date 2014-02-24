@@ -6,6 +6,8 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.text.Html;
+import android.text.method.LinkMovementMethod;
+import android.text.method.MovementMethod;
 import android.text.util.Linkify;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -27,13 +29,22 @@ import com.example.gitjob.R;
 
 
 public class Fragment0 extends Fragment {
+	// 1st page layout
 	ListView quickList;
 	EditText searchBar;
 	ImageButton searchButton;
 	ListView  resultList;
+	// 2nd page layout
+	TextView jobTitle_p2;
+	TextView location_p2;
+	TextView type_p2;
+	TextView company_p2;
 	TextView description;
+	TextView howToApply;
+	TextView companyUrl;
 	TextView pleaseInput;
-	//TextView pleaseInputReturn;
+	
+	
 	private ShowBoxTask task; // add task to show progress box display
 	public ArrayAdapter<JobInfoItems> adapter; // arrayList and adapter
 	public static View view;
@@ -144,28 +155,62 @@ public class Fragment0 extends Fragment {
 			        MainActivity.pageLock.notifyDataSetChanged();
 					((MainActivity)getActivity()).viewPager.setCurrentItem(1);
 					MainActivity.listNumber = arg2;
-					//JobInfoItems item = MainActivity.lastResultList.get(MainActivity.listNumber);
+					// manipulating click and swipe/show results
 					if(MainActivity.lastResultList.size()>0){
 					    JobInfoItems item = MainActivity.lastResultList.get(MainActivity.listNumber);
+					    //2nd page layout 
 					    
-					    TextView description = (TextView) Fragment1.view.findViewById(R.id.tv_description);
+					    jobTitle_p2 = (TextView) Fragment1.view.findViewById(R.id.tv_jobTitle_p2);
+					    jobTitle_p2.setText(item.getjobTitle());
+						company_p2 = (TextView) Fragment1.view.findViewById(R.id.tv_company_p2);
+						company_p2.setText(item.getCompany());
+						type_p2 = (TextView) Fragment1.view.findViewById(R.id.tv_type_p2);
+						type_p2.setText(item.getType());
+						location_p2= (TextView) Fragment1.view.findViewById(R.id.tv_location_p2);
+						location_p2.setText(item.getLocation());
+
+					    
+					    //set view
+					    description = (TextView) Fragment1.view.findViewById(R.id.tv_description);
+					    //href link activate
+					    MovementMethod mMethod_de = LinkMovementMethod.getInstance();
+					    description.setMovementMethod(mMethod_de);
+					    //html tag strip and set text size
 					    String de = item.getDescription();
 					    description.setText(Html.fromHtml(de));
-					    description.setTextSize(10);
-					    TextView howToApply = (TextView)Fragment1.view.findViewById(R.id.tv_howToApply);
-					    String ho = item.getDescription();
-					    description.setText(Html.fromHtml(ho));
-					    howToApply.setTextSize(10);
-					    TextView companyUrl = (TextView)Fragment1.view.findViewById(R.id.tv_companyUrl);
-					    String co = item.getDescription();
-					    description.setText(Html.fromHtml(co));
-					    companyUrl.setTextSize(10);
+					    description.setTextSize(15);
+					    
+					    //set view
+					    howToApply = (TextView)Fragment1.view.findViewById(R.id.tv_howToApply);
+					    //href link activate
+					    MovementMethod mMethod_ho = LinkMovementMethod.getInstance();
+					    howToApply.setMovementMethod(mMethod_ho);
+					    //html tag strip and set text size
+					    String ho = item.getHowToApply();
+					    //null result ommit
+					    if(ho.contains("null")){
+					    	howToApply.setText("");
+					    }else{
+					    howToApply.setText(Html.fromHtml(ho));
+					    howToApply.setTextSize(15);
+					    }
+					    //set view
+					    companyUrl = (TextView)Fragment1.view.findViewById(R.id.tv_companyUrl);
+					    //html tag strip and set text size
+					    String co = item.getCompanyUrl();
+					    //null result ommit
+					    if(co.contains("null")){
+					    	companyUrl.setText("");
+					    }else{
+					    companyUrl.setText(Html.fromHtml(co));
+					    companyUrl.setTextSize(15);
 					    Linkify.addLinks(companyUrl, Linkify.WEB_URLS);
 					    }
-									
+					}
 		}
 	});
 	
+	//1st page 
 	//search bar layout set
 	searchBar= (EditText) view.findViewById(R.id.et_keyword);
 	//search button layout set
@@ -177,16 +222,3 @@ public class Fragment0 extends Fragment {
 
 }
 
-/** code for url open
-method throws Exception {
-
-        URL oracle = new URL("http://www.oracle.com/");
-        BufferedReader in = new BufferedReader(
-        new InputStreamReader(oracle.openStream()));
-
-        String inputLine;
-        while ((inputLine = in.readLine()) != null)
-            System.out.println(inputLine);
-        in.close();
-    }
-    */
