@@ -22,8 +22,8 @@ public final class R {
     }
     public static final class id {
         public static final int action_settings=0x7f080011;
-        public static final int et_keyword=0x7f08000c;
-        public static final int ibtn_search=0x7f08000d;
+        public static final int et_keyword=0x7f08000d;
+        public static final int ibtn_search=0x7f08000c;
         public static final int list1=0x7f08000f;
         public static final int pager=0x7f080010;
         public static final int tv_company=0x7f080001;

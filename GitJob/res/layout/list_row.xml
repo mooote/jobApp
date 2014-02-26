@@ -34,7 +34,7 @@
         android:layout_margin="1dp"
         android:textStyle="normal"
         android:textColor="#00ff00" />
-         </LinearLayout>
+        </LinearLayout>
       
 		<LinearLayout
 	    android:layout_width="match_parent"

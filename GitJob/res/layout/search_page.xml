@@ -4,45 +4,40 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-     <!-- リニアレイアウト(縦並び) -->
-       <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="7dp"
-            android:layout_marginLeft="7dp"
-            android:orientation="vertical" >
-
-            <!-- リニアレイアウト(横並び) -->
-          <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="dp"
-                android:orientation="horizontal" >
-
-                <!-- 検索キーワード入力エリア -->
-                <EditText
+      <RelativeLayout
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="7dp"
+          android:layout_marginRight="7dp" >
+       
+         <EditText
+                    android:layout_alignBottom="@+id/ibtn_search"
+                    android:layout_alignParentTop="true"
                     android:id="@+id/et_keyword"
-                    android:layout_width="0dip"
-                    android:layout_height="wrap_content"
-                    android:inputType="textNoSuggestions"
-                    android:layout_weight="1"
+					android:layout_width="fill_parent"
+    				android:layout_height="wrap_content"
+    				android:layout_toLeftOf="@+id/ibtn_search"
                     android:hint="@string/searchBox_hint"
+                    android:inputType="textNoSuggestions"
                     android:singleLine="true"
                     android:textSize="28sp" />
 
                 <!-- 検索ボタン -->
-                <ImageButton
-                    android:id="@+id/ibtn_search"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/search" />
-            </LinearLayout>    
-        
+      <ImageButton
+          android:id="@+id/ibtn_search"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentRight="true"
+    	  android:layout_alignParentTop="true"
+          android:src="@drawable/search" />
+</RelativeLayout>
+
           <TextView 
                   android:id="@+id/tv_pleaseInput"
-                  android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"/>
-
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:textSize="25sp"
+                  android:gravity="center"/>
 
  <!-- 1st search page list (lastResultlist) -->   	
             <ListView
@@ -55,5 +50,4 @@
                 android:choiceMode="singleChoice"
                 android:fadingEdge="vertical" -->
             </LinearLayout>
-    
-</LinearLayout>
+   

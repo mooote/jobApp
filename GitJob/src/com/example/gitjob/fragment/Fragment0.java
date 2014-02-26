@@ -79,7 +79,7 @@ public class Fragment0 extends Fragment {
 			if(MainActivity.ENCODE_jPlace_initial.length()==0){ 
 				TextView pleaseInput = (TextView)view.findViewById(R.id.tv_pleaseInput);
 				pleaseInput.setText("oops! correct typing please");
-				pleaseInput.setTextSize(25); 
+				//pleaseInput.setTextSize(25); 
 				return;
     	    	}
           	// set adaptor and layout page and list
