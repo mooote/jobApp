@@ -1,6 +1,7 @@
 package com.example.gitjob.fragment;
 
 
+
 import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -28,6 +29,7 @@ import com.example.gitjob.MainActivity;
 import com.example.gitjob.R;
 
 
+
 public class Fragment0 extends Fragment {
 	// 1st page layout
 	ListView quickList;
@@ -39,6 +41,7 @@ public class Fragment0 extends Fragment {
 	TextView location_p2;
 	TextView type_p2;
 	TextView company_p2;
+	//ImageView icon;
 	TextView description;
 	TextView howToApply;
 	TextView companyUrl;
@@ -170,6 +173,12 @@ public class Fragment0 extends Fragment {
 						location_p2.setText(item.getLocation());
 
 					    
+						//icon set up needs to be declared here 
+						//icon = (ImageView)Fragment1.view.findViewById(R.id.iv_logo); 
+						// icon setting up as imagebitmap 
+						//icon.setImageBitmap(logoDisplay);
+						
+						
 					    //set view
 					    description = (TextView) Fragment1.view.findViewById(R.id.tv_description);
 					    //href link activate

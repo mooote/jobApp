@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000000"
+    android:background="#ffffff"
     android:orientation="vertical" >
 
     	<TextView
@@ -25,7 +25,7 @@
         android:layout_marginLeft="1dp"
         android:layout_marginRight="20dp"
         android:textStyle="bold"
-        android:textColor="#ffffff" />
+        android:textColor="#000000" />
         
         <TextView
         android:id="@+id/tv_type"
@@ -33,7 +33,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="1dp"
         android:textStyle="normal"
-        android:textColor="#00ff00" />
+        android:textColor="#009933" />
         </LinearLayout>
       
 		<LinearLayout
@@ -48,7 +48,7 @@
         android:layout_marginLeft="1dp"
         android:layout_marginRight="20dp"
         android:textStyle="normal"
-        android:textColor="#00ff00" />
+        android:textColor="#009933" />
      	
      	<TextView
         android:id="@+id/tv_createdAt"
@@ -57,6 +57,6 @@
         android:layout_margin="1dp"
         android:layout_gravity="right"
         android:textStyle="normal"
-        android:textColor="#ffffff" />
+        android:textColor="#000000" />
 	</LinearLayout>
 </LinearLayout>
