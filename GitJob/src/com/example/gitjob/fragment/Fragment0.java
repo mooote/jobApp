@@ -1,7 +1,6 @@
 package com.example.gitjob.fragment;
 
 
-
 import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -27,7 +26,6 @@ import com.example.gitjob.JobInfoItems;
 import com.example.gitjob.JobListAdapter;
 import com.example.gitjob.MainActivity;
 import com.example.gitjob.R;
-
 
 
 public class Fragment0 extends Fragment {
@@ -63,19 +61,11 @@ public class Fragment0 extends Fragment {
                 MainActivity.lastResultList.clear();
                 TextView pleaseInput = (TextView)view.findViewById(R.id.tv_pleaseInput);
         	      pleaseInput.setText(""); 
+        	      if(MainActivity.lastResultList.size()!=0){
+        	    	  MainActivity.hold=true;
+        	      }
         	}
-        	
-        	//pleaseInput.setText("");
-        	
-            // clear list result
-
-        	// clear error messages
-        	//if(pleaseInput.getText().toString()!=null){
-    	  		//pleaseInput.setText("");
-        	//}
-    		//final TextView noResult  = (TextView)Fragment0.view.findViewById(R.id.tv_noResult);
-    	    //noResult.setText("");
-        	//} 
+        	 
         	// edit text error message text set
             EditText searchBar= (EditText) getActivity().findViewById(R.id.et_keyword);       	
             MainActivity.ENCODE_jPlace_initial= searchBar.getText().toString();
