@@ -1,6 +1,7 @@
 package com.example.gitjob.fragment;
 
 
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -70,8 +71,12 @@ public class Fragment0 extends Fragment {
             EditText searchBar= (EditText) getActivity().findViewById(R.id.et_keyword);       	
             MainActivity.ENCODE_jPlace_initial= searchBar.getText().toString();
 			if(MainActivity.ENCODE_jPlace_initial.length()==0){ 
-				TextView pleaseInput = (TextView)view.findViewById(R.id.tv_pleaseInput);
-				pleaseInput.setText("oops! correct typing please");
+				AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        		builder.setMessage(R.string.error_message_noInput);
+                AlertDialog dialog = builder.create();
+                dialog.show();
+				//TextView pleaseInput = (TextView)view.findViewById(R.id.tv_pleaseInput);
+				//pleaseInput.setText("oops! correct typing please");
 				//pleaseInput.setTextSize(25); 
 				return;
     	    	}
