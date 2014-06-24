@@ -6,6 +6,7 @@
     <string name="searchBox_hint">search by city</string>
     <string name="error_message_noInput">Oops! Correct typing please!</string>
     <string name="error_message_misspelling">Oops! No results found</string>
+    <string name="serach_button_to_click_desc">serach button to click</string>
 
     
 

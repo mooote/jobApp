@@ -64,6 +64,7 @@ public final class R {
         public static final int error_message_misspelling=0x7f050005;
         public static final int error_message_noInput=0x7f050004;
         public static final int searchBox_hint=0x7f050003;
+        public static final int serach_button_to_click_desc=0x7f050006;
     }
     public static final class style {
         /** 

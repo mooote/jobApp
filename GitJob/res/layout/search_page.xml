@@ -7,8 +7,8 @@
       <RelativeLayout
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
-          android:layout_marginLeft="20dp"
-          android:layout_marginRight="20dp" >
+          android:layout_marginLeft="@dimen/activity_horizontal_margin"
+          android:layout_marginRight="@dimen/activity_horizontal_margin" >
        
          <EditText
                     android:layout_alignBottom="@+id/ibtn_search"
@@ -28,7 +28,8 @@
           android:layout_height="wrap_content"
           android:layout_alignParentRight="true"
     	  android:layout_alignParentTop="true"
-          android:src="@drawable/search" />
+          android:src="@drawable/search" 
+          android:contentDescription="@string/serach_button_to_click_desc"/>
 </RelativeLayout>
 
           <TextView 
@@ -46,7 +47,10 @@
                 android:layout_height="match_parent"
                 android:paddingRight="20dp"
                 android:layout_marginLeft="20dp"
-                android:scrollbarStyle="outsideInset"/>
+                android:scrollbarStyle="outsideInset"
+                android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                android:clipToPadding="false"
+                />
                 <!-- android:background="#00ffff" 
                 android:layout_marginBottom="100dp"
                 android:layout_marginTop="220dp"
