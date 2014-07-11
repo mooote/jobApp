@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">GitJobs Hunt</string>
-    <string name="action_settings">Settings</string>
-    <string name="app_title">GitJobs Hunt</string>
-    <string name="searchBox_hint">search by city</string>
-    <string name="error_message_noInput">Oops! Correct typing please!</string>
-    <string name="error_message_misspelling">Oops! No results found</string>
-    <string name="serach_button_to_click_desc">serach button to click</string>
-
-    
-
+	<string name="app_name">GitJobs Hunt</string>
+	<string name="action_settings">Settings</string>
+	<string name="app_title">GitJobs Hunt</string>
+	<string name="action_search">search me</string>
+	<string name="error_message_noInput">Oops! Correct typing please!</string>
+	<string name="error_message_misspelling">Oops! No results found</string>
+	<string name="serach_button_to_click_desc">serach button to click</string>
+	<string name="search_hint">serach by city</string>
+	<string name="searchBox_hint">serach by city</string>
 </resources>
